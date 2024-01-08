@@ -1,34 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="index.js"></script>
+
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <nav>
-      <div class="logo">AMIR ALLAM'S ART & DESIGNS</div>
-      <div class="nav-items">
-        <a href="/">Home</a>
-        <a href="/">Gallery</a>
-        <a href="/">About</a>
-        <a href="/">Contact</a>
+  <body style="background-color: white">
+    <nav class="navbar">
+      <a class="navbar-brand" href="#">
+        <img src="Logo_Placeholder.png" height="60" />
+      </a>
+      <a href="#home">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="navItenDropDown()">
+          Gallery
+          <i class="fa fa-caret-down">&#9660;</i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="#">Gallery</a>
+          <a href="#">Videos</a>
+          <a href="#">Projects</a>
+        </div>
       </div>
+      <a href="#news">About</a>
+      <a href="#news">Contact</a>
     </nav>
-    <section class="slogan">
-      <div class="slogan-container">
-        <div class="column-left">
-          <h1>Meet the Artist</h1>
-          <p>Insert a short bio</p>
-          <h1>Enviorments</h1>
-          <h1>Commercial art</h1>
-        </div>
-        <div class="banner">
-          <img src="background.jpeg" alt="background" class="banner" />
-        </div>
-      </div>
-    </section>
   </body>
 </html>
