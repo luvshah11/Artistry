@@ -1,32 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!--headers/styles-->
   <head>
     <link rel="stylesheet" href="style.css" />
     <script type="text/javascript" src="index.js"></script>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Artist Amir Allam</title>
   </head>
+
+  <!--Webpage-->
   <body style="background-color: white">
-    <nav class="navbar">
+    <!--Top Bar-->
+    <!-- <div class="top-bar"></div> -->
+
+    <!--Navbar-->
+    <div class="navbar">
+      <!--Brand Logo-->
       <a class="navbar-brand" href="#">
-        <img src="Logo_Placeholder.png" height="60" />
+        <img class="nav-logo" src="Logo_Placeholder.png" height="60" />
       </a>
-      <a href="#home">Home</a>
-      <div class="dropdown">
-        <button class="dropbtn" onclick="navItenDropDown()">
-          Gallery
-          <i class="fa fa-caret-down">&#9660;</i>
-        </button>
-        <div class="dropdown-content" id="myDropdown">
-          <a href="#">Gallery</a>
-          <a href="#">Videos</a>
-          <a href="#">Projects</a>
+
+      <!--Menu Items-->
+      <nav class="navlist" id="nav-links">
+        <a id="nav-item" href="#home">Home</a>
+        <div class="dropdown" id="nav-item">
+          <button class="dropbtn" onclick="navItenDropDown()">
+            Gallery
+            <i class="fa fa-caret-down">&#9660;</i>
+          </button>
+          <div class="dropdown-content" id="myDropdown">
+            <a id="nav-item" href="#gallery">Paintings</a>
+            <a id="nav-item" href="#vids">Videos</a>
+            <a id="nav-item" href="#proj">Projects</a>
+          </div>
         </div>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- Menu Icon-->
+      <div
+        class="hamburger-icon"
+        id="toggle-icon"
+        href="javascript:void(0);"
+        onclick="classToggle()"
+      >
+        <div class="solid-white-line"></div>
+        <div class="solid-white-line"></div>
+        <div class="solid-white-line"></div>
       </div>
-      <a href="#news">About</a>
-      <a href="#news">Contact</a>
-    </nav>
+    </div>
+
+    <script type="text/javascript" src="index.js"></script>
   </body>
 </html>
