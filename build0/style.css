@@ -6,14 +6,8 @@
   font-family: Arial;
 }
 
-#nav-links{
-  
-    translate: 0px 10px;
-    padding-bottom: 10px;
-  
-}
 /* Links inside the navbar */
-a {
+.navbar a {
 
   float: left;
   font-size: 16px;
@@ -59,11 +53,12 @@ a {
 /* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
-  position: inherit;
+  position: absolute; /*constraint that cuts off menu and needs repositioning*/
   background-color: #949494;
-
+  min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  translate: 0px 50px;
 }
 /* Links inside the dropdown */
 .dropdown-content a {
@@ -76,7 +71,7 @@ a {
 }
 
 /* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover .dropbtn, .dropbtn:focus{
+.dropdown-content a:hover{
   background-color: #a5a5a5;
 }
 .dropdown-content a:hover {
@@ -128,7 +123,12 @@ a {
     align-items: center;
     
   }
-
+  .dropdown-content {
+    position: inherit;
+    min-width: auto;
+    translate: none;
+    
+  }
   .hamburger-icon{
     display:block;
     position: absolute;

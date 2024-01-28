@@ -30,5 +30,3 @@ function classToggle() {
   }
 }
 
-// document.querySelector('#toggle-icon')
-//   .addEventListener('click', classToggle);
