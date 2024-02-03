@@ -1,3 +1,24 @@
+@media screen { 
+  
+  /* start of screen rules. */ 
+  
+  /* Generic pane rules */
+  body, html { margin: 0;  padding: 0}
+  *{
+    box-sizing: border-box;
+  }
+  .row, .col { overflow: hidden; position: absolute; }
+  .row { left: 0; right: 0; }
+  .col { top: 0; bottom: 0; }
+  .scroll-x { overflow-x: auto; }
+  .scroll-y { overflow-y: auto; }
+
+  .header.row { height: 75px; top: 0; }
+  .body.row { top: 75px; bottom: 50px; }
+  .footer.row { height: 50px; bottom: 0; }
+  
+  /* end of screen rules. */ 
+}
 /* Navbar container */
 .navbar {
 
@@ -7,7 +28,7 @@
 }
 
 /* Links inside the navbar */
-.navbar a {
+.navbar a , .navlist{
 
   float: left;
   font-size: 16px;
@@ -103,8 +124,66 @@
   display:none;
 }
 
-/*flex box nav bar*/
 
+/*paralaz scrolling banner image*/
+.parallax {
+
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 1000px;
+  perspective: 1px;
+  display: flex;
+  flex-flow: column;
+  height: 85vh;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 5vh 0;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+  background-image:URL("backgroundgrid.png");
+  background-repeat: no-repeat, repeat;
+  filter: blur(8px);
+  background-position: 90% 60%, center center;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  transform: translateZ(-1px) scale(3);
+}
+
+.ForegroundTitle{
+  font-size: 90px;
+  font-family: Arial;
+  color: white;
+  position: absolute;
+  left: 28%;
+  top: 20%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.ForegroundProfilePic{
+
+  padding-top: 10px;
+  padding-bottom: 90px;
+  transform: translateZ(-1px);
+  border-radius: 100%;
+  border-color: aqua;
+  transform: translateX(+1110px);
+}
+
+.HomePage{
+  padding-top: 1000px;;
+}
+
+
+
+/*flex box nav bar*/
 @media all and (max-width: 600px) {
   .navbar, .navbar a, .navlist{  
 
