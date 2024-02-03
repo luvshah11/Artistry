@@ -181,7 +181,24 @@
   padding-top: 1000px;;
 }
 
+.footer{
+  background-color: rgb(3, 36, 10);
+  padding-top: 64px;
+  padding-top: 7vh;
+  position: absolute;
+  bottom: 0;
+  height: 2.5rem;
+  width: 100%;
+  overflow: hidden;
 
+}
+.footer-col {
+  width:auto;
+
+  height:100px;
+  float:left;
+  margin:0 10px;
+}
 
 /*flex box nav bar*/
 @media all and (max-width: 600px) {
