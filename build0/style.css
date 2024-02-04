@@ -4,9 +4,7 @@
   
   /* Generic pane rules */
   body, html { margin: 0;  padding: 0}
-  *{
-    box-sizing: border-box;
-  }
+
   .row, .col { overflow: hidden; position: absolute; }
   .row { left: 0; right: 0; }
   .col { top: 0; bottom: 0; }
@@ -34,7 +32,7 @@
   font-size: 16px;
   color: white;
   text-align: left;
-  padding: 10px 16px;
+  padding: 10px 100px;
   text-decoration: none;
   
 }
@@ -146,6 +144,10 @@
 }
 .parallax__layer--base {
   transform: translateZ(0);
+  /*this will be the coantiner class for the rest of the home page proper*/
+  display: flex;
+  flex-direction: column;
+  padding-left: 36px;
 }
 .parallax__layer--back {
   background-image:URL("backgroundgrid.png");
@@ -158,23 +160,31 @@
 }
 
 .ForegroundTitle{
-  font-size: 90px;
+  font-size: 14vh;
   font-family: Arial;
   color: white;
-  position: absolute;
-  left: 28%;
-  top: 20%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  width:87%;
+  display: flex;
+  flex-direction: row;
+  
+  align-self: center;
+
+
+}
+.ForegroundTitle-desc{
+  font-size: 3vh;
+  color: whitesmoke;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-family: Helvetica;
+  padding-top: 79px;
 }
 .ForegroundProfilePic{
-
-  padding-top: 10px;
-  padding-bottom: 90px;
-  transform: translateZ(-1px);
+  align-self: center;
+  padding-left: 300px;
+}
+.pfp{
   border-radius: 100%;
-  border-color: aqua;
-  transform: translateX(+1110px);
+  scale: 160%;
 }
 
 .HomePage{
