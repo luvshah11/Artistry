@@ -195,6 +195,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 280px;
+  
 }
 
 .boxsample
@@ -205,14 +206,15 @@
   align-content: center;
   width: 25vw;
   border-radius: 15%;
-
-  
+  cursor: pointer;
+  opacity: 1;
 }
 
 .boximage{
   background: darkred;
   width: 25px;
   padding: 32%;
+
 }
 
 .apcptitle{
@@ -223,6 +225,8 @@
  .apcp{
   border-top-left-radius:  15%;
   border-top-right-radius: 15%;
+  opacity: 1;
+  
 }
 
 
